@@ -24,7 +24,6 @@ class Tooltip {
 
   detach() {
     this.element.remove();
-    // this.element.parentElement.removeChild(this.element);
   }
 
   attach() {
@@ -108,8 +107,6 @@ class ProjectList {
   }
 
   switchProject(projectId) {
-    // const projectIndex = this.projects.findIndex(p => p.id === projectId);
-    // this.projects.splice(projectIndex, 1);
     this.switchHandler(this.projects.find(p => p.id === projectId));
     this.projects = this.projects.filter(p => p.id !== projectId);
   }
